@@ -86,18 +86,18 @@ public class CollectionTask {
 
     static Integer secondMaxValCollection(ArrayList<Integer> arrayList) {
        Integer largest = Integer.MIN_VALUE;
-       Integer secondLarge = Integer.MIN_VALUE;
+       Integer secondLargest = Integer.MIN_VALUE;
 
        for (Integer number : arrayList){
            if(number > largest){
-               secondLarge = largest;
+               secondLargest = largest;
                largest = number;
            }
-           else if (number > secondLarge && !number.equals(largest)) {
-            secondLarge = number;
+           else if (number > secondLargest && !number.equals(largest)) {
+               secondLargest = number;
         }
        }
-       return secondLarge;
+       return secondLargest;
 
     }
 
@@ -112,6 +112,21 @@ public class CollectionTask {
         ArrayList<Integer> reversedArrayList = new ArrayList<>(arrayList);
         Collections.reverse(reversedArrayList);
         return arrayList.equals(reversedArrayList);
+    }
+
+
+    /// i'm not certainly sure about next task solving
+    static long selectRandomElement100000(ArrayList<Integer> arrayList) {
+        Random random = new Random();
+        long start = System.currentTimeMillis();
+        int max = arrayList.size();
+
+        for (int i = 0; i < 100000; i++) {
+            int randomNumber = random.nextInt(max);
+            arrayList.get(randomNumber);
+        }
+
+        return System.currentTimeMillis() - start;
     }
 
         public static void main(String[] args) {
@@ -157,7 +172,7 @@ public class CollectionTask {
 
        System.out.println("//////// Array list for easier comparison for next task: " + arrayList); // added for easier comparison of arrays in next println
 
-       System.out.println("Task 12: Swapped elements first to last and vice versa: " +  swappingElems(arrayList));
+       System.out.println("Task 12: Swapped elements first to last: " +  swappingElems(arrayList));
 
        System.out.println("Task 13: Second max value in collection: " +  secondMaxValCollection(arrayList));
 
@@ -166,6 +181,9 @@ public class CollectionTask {
             checkingArray.add(1);
             checkingArray.add(0);
        System.out.println("Task 14: is palindrome: " + isPalindrome(checkingArray));
+
+       long elapsedTime = selectRandomElement100000(arrayList);
+       System.out.println("Task 15: Time spent: " + elapsedTime + " milliseconds");
 
 
     }
