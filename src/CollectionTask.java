@@ -84,24 +84,24 @@ public class CollectionTask {
     }
 
     static Integer secondMaxValCollection(ArrayList<Integer> arrayList) {
-       Integer largest = Integer.MIN_VALUE;
-       Integer secondLargest = Integer.MIN_VALUE;
+        Integer largest = Integer.MIN_VALUE;
+        Integer secondLargest = Integer.MIN_VALUE;
 
-       for (Integer number : arrayList){
-           if(number > largest){
-               secondLargest = largest;
-               largest = number;
-           }
-           else if (number > secondLargest && !number.equals(largest)) {
-               secondLargest = number;
+        for (Integer number : arrayList){
+            if(number > largest){
+                secondLargest = largest;
+                largest = number;
+            }
+            else if (number > secondLargest && !number.equals(largest)) {
+                secondLargest = number;
+            }
         }
-       }
-       return secondLargest;
+        return secondLargest;
 
     }
 
     static boolean containsElemInCollection(ArrayList<Integer> arrayList) {
-        int value = 9999999;
+        Integer value = 9999999;
         boolean isContainsValue = arrayList.contains(value);
         return isContainsValue;
     }
@@ -128,61 +128,63 @@ public class CollectionTask {
         return System.currentTimeMillis() - start;
     }
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
-       ArrayList<Integer> myArrayTask1 = generateArrayList();
-       System.out.println("Task 1: create empty collection цілих numbers " + myArrayTask1);
+        ArrayList<Integer> myArrayTask1 = generateArrayList();
+        System.out.println("Task 1: create empty collection цілих numbers " + myArrayTask1);
 
-       ArrayList <Integer> arrayList = arrayListWithRandomFillingIn(myArrayTask1);
+        ArrayList <Integer> arrayList = arrayListWithRandomFillingIn(myArrayTask1);
 
-       ArrayList<Integer> firstCopy = createCopyArrayList(arrayList);
-       System.out.println("Task 3: create a copy of previous array via reference" + firstCopy);
+        ArrayList<Integer> firstCopy = createCopyArrayList(arrayList);
+        System.out.println("Task 3: create a copy of previous array via reference" + firstCopy);
 
-       ArrayList<Integer> secondCopy = createCopyArrayListSecond(arrayList);
-       System.out.println("Task 3.1: Creating array copy via cloning" + secondCopy);
+        ArrayList<Integer> secondCopy = createCopyArrayListSecond(arrayList);
+        System.out.println("Task 3.1: Creating array copy via cloning" + secondCopy);
 
-       ArrayList<Integer> thirdCopy = createCopyArrayListThird(arrayList);
-       System.out.println("Task 3.2: Creating array copy via add() method" + thirdCopy);
+        ArrayList<Integer> thirdCopy = createCopyArrayListThird(arrayList);
+        System.out.println("Task 3.2: Creating array copy via add() method" + thirdCopy);
 
-       arrayList.add(9999999);
-       System.out.println(arrayList);
-       System.out.println(firstCopy);
-       System.out.println(secondCopy);
-       System.out.println(thirdCopy);
-
-
-       System.out.println("Task 4: Creating set " + createSet(arrayList));
-
-       System.out.println("Task 5: Sorting collection " + sortCollection(arrayList));
-
-       System.out.println("Task 6.1: Min value in collection: " + minValCollection(arrayList));
-       System.out.println("Task 6.2: Max value in collection: " + maxValCollection(arrayList));
-
-       System.out.println("Task 7: sum up collection: " + sumElemCollection(arrayList));
+        arrayList.add(9999999);
+        arrayList.add(9999999);
+        arrayList.add(9999999);
+        System.out.println(arrayList);
+        System.out.println(firstCopy);
+        System.out.println(secondCopy);
+        System.out.println(thirdCopy);
 
 
-       System.out.println("Task 8: only positive numbers: " + onlyPositiveNumbers(arrayList));
+        System.out.println("Task 4: Creating set " + createSet(arrayList));
 
-       System.out.println("Task 9: Array contains entered value? - " + containsElemInCollection(arrayList));
+        System.out.println("Task 5: Sorting collection " + sortCollection(arrayList));
 
-       System.out.println("Task 10: Count of specific nubmer in array: " + frequencyOfSpecNumber(arrayList));
+        System.out.println("Task 6.1: Min value in collection: " + minValCollection(arrayList));
+        System.out.println("Task 6.2: Max value in collection: " + maxValCollection(arrayList));
 
-       System.out.println("Task 11: Reversed collection: " + reversedCollection(arrayList));
+        System.out.println("Task 7: sum up collection: " + sumElemCollection(arrayList));
 
-       System.out.println("//////// Array list for easier comparison for next task: " + arrayList); // added for easier comparison of arrays in next println
 
-       System.out.println("Task 12: Swapped elements first to last: " +  swappingElems(arrayList));
+        System.out.println("Task 8: only positive numbers: " + onlyPositiveNumbers(arrayList));
 
-       System.out.println("Task 13: Second max value in collection: " +  secondMaxValCollection(arrayList));
+        System.out.println("Task 9: Array contains entered value? - " + containsElemInCollection(arrayList));
 
-       ArrayList<Integer> checkingArray = new ArrayList<>();
-            checkingArray.add(0);
-            checkingArray.add(1);
-            checkingArray.add(0);
-       System.out.println("Task 14: is palindrome: " + isPalindrome(checkingArray));
+        System.out.println("Task 10: Count of specific nubmer in array: " + frequencyOfSpecNumber(arrayList));
 
-       long elapsedTime = selectRandomElement100000(arrayList);
-       System.out.println("Task 15: Time spent: " + elapsedTime + " milliseconds");
+        System.out.println("Task 11: Reversed collection: " + reversedCollection(arrayList));
+
+        System.out.println("//////// Array list for easier comparison for next task: " + arrayList); // added for easier comparison of arrays in next println
+
+        System.out.println("Task 12: Swapped elements first to last: " +  swappingElems(arrayList));
+
+        System.out.println("Task 13: Second max value in collection: " +  secondMaxValCollection(arrayList));
+
+        ArrayList<Integer> checkingArray = new ArrayList<>();
+        checkingArray.add(0);
+        checkingArray.add(1);
+        checkingArray.add(0);
+        System.out.println("Task 14: is palindrome: " + isPalindrome(checkingArray));
+
+        long elapsedTime = selectRandomElement100000(arrayList);
+        System.out.println("Task 15: Time spent: " + elapsedTime + " milliseconds");
 
 
     }
