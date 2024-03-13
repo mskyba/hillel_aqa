@@ -7,6 +7,6 @@ public class Main {
             System.out.println(bike.getDescription());
 
             Truck deliveryTruck = new Truck("Delivery Truck", 30.5);
-            System.out.println(deliveryTruck.getDescription());
+            System.out.println(deliveryTruck.getDescription(true));
         }
     }
