@@ -16,7 +16,11 @@ public class Main {
         nestedStatic.printStatic();
         dog.localClassExample();
         cat.performAction();
-        Cat cat1 = new Cat(); // class without constructor
+        Cat catCat = new Cat();
+        catCat.setName("Myrzik");
+        catCat.setAge(21);
+        catCat.setId(10);
+        System.out.println("Cat's name: " + catCat.getName()+ " --> " + "Cat's age: " + catCat.getAge()+ " --> " + "Cat's id: " + catCat.getId());
 
         Dog doggy = new Dog("Kek", 1);
         System.out.println(doggy.getDogsName());
@@ -24,5 +28,7 @@ public class Main {
         System.out.println("After name was reassigned: " + doggy.getDogsName());
         Dog.DogName woofWoof = new Dog.DogName();
         woofWoof.printStaticName();
+
+
     }
 }
