@@ -1,4 +1,4 @@
-class Car extends Vehicle {
+public class Car extends Vehicle {
     final int numDoors;
 
     Car(String model, int numDoors) {

@@ -1,4 +1,4 @@
-class Motorcycle extends Vehicle {
+public class Motorcycle extends Vehicle {
     final boolean hasSidecar;
 
     Motorcycle(String model, boolean hasSidecar) {
