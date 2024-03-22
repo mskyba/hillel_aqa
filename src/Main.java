@@ -41,9 +41,9 @@ public class Main {
 
     public static void test() throws NoSuchMethodError{
         int a = 0;
-        if(a == 0) {
+        if(a > 1) {
             try {
-                throw new NoSuchMethodError();
+                throw new RuntimeException();
             } catch (NoSuchMethodError exception) {
                 System.out.println("Printing out two: " + givingNumberTwo());
             } finally {
