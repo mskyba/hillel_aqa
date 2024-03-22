@@ -36,6 +36,20 @@ public class Main {
             System.out.println("Finally block added and is it raining now? : "+ isItRaining);
 
         }
+        test();
+    }
+
+    public static void test() throws NoSuchMethodError{
+        int a = 0;
+        if(a == 0) {
+            try {
+                throw new NoSuchMethodError();
+            } catch (NoSuchMethodError exception) {
+                System.out.println("Printing out two: " + givingNumberTwo());
+            } finally {
+                System.out.println("Added throws for commit");
+            }
+        }
     }
 
     public static int givingNumberTwo(){
