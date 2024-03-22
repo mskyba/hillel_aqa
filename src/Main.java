@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) throws MyException{
+    public static void main(String[] args) {
         int array[] = new int[]{0,1,23};
 
         try {
